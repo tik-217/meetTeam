@@ -1,0 +1,9 @@
+@use "@/shared/styles";
+
+.inputDefault {
+  @include styles.inputDefault;
+}
+
+.inputsRequired {
+  @include styles.inputsRequired;
+}

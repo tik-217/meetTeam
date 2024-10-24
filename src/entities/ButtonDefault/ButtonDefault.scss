@@ -1,0 +1,28 @@
+@use "@/shared/styles";
+
+.buttonDefault {
+  background: styles.$royalBlue;
+  border-radius: 12px;
+
+  width: 100%;
+  padding: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &__btn {
+    background: transparent;
+
+    color: white;
+
+    border: none;
+
+    padding: 0;
+  }
+
+  svg {
+    margin-left: 8px;
+  }
+}

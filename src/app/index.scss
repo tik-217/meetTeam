@@ -1,0 +1,23 @@
+@use "../../node_modules/normalize.css/normalize.css";
+
+html,
+body,
+#root {
+  height: 100%;
+
+  font-family: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-display: swap;
+  src: url("@/shared/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-display: swap;
+  src: url("@/shared/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf");
+}

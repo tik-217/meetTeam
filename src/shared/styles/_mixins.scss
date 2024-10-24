@@ -1,0 +1,54 @@
+@use "./variables" as *;
+
+// styles for inputs of auth
+@mixin inputDefault() {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: 8px;
+    user-select: none;
+  }
+
+  &__input {
+    padding: 16px;
+
+    font-size: 14px;
+
+    width: -webkit-fill-available;
+
+    border-radius: 12px;
+    border: 1px solid $mischka;
+
+    &:active {
+      outline: 1px solid $havelockBlue;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+}
+
+// red label and inputs
+@mixin inputsRequired() {
+  & > label {
+    color: $froly;
+  }
+
+  input {
+    border: 1px solid $froly;
+
+    &:focus {
+      border: 1px solid $froly;
+    }
+
+    &::placeholder {
+      color: $froly;
+    }
+  }
+
+  svg > path {
+    fill: $froly;
+  }
+}

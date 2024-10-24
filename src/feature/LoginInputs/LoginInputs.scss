@@ -1,0 +1,5 @@
+.loginInputs {
+  & > div:not(div:last-child) {
+    margin-bottom: 12px;
+  }
+}
