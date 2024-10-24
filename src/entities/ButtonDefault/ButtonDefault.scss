@@ -14,8 +14,10 @@
 
   &__btn {
     background: transparent;
-
     color: white;
+
+    user-select: none;
+    cursor: pointer;
 
     border: none;
 

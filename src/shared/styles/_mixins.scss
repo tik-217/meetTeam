@@ -52,3 +52,9 @@
     fill: $froly;
   }
 }
+
+// max-width of the form
+@mixin authFormWidth() {
+  max-width: 520px;
+  width: 100%;
+}

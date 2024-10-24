@@ -1,4 +1,4 @@
-import { LoginWidget } from "@/widgets/LoginWidget/LoginWidget";
+import { LoginWidget } from "@/widgets/LoginWidget";
 import "./Authentication.scss";
 
 export const Authentication = () => {
