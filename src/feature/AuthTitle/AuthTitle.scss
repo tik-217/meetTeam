@@ -1,0 +1,17 @@
+.authTitle {
+  &__titleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 40px;
+  }
+
+  &__titleText {
+    margin: 0;
+    margin-top: 8px;
+
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

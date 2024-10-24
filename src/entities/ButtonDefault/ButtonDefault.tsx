@@ -3,7 +3,7 @@ import "./ButtonDefault.scss";
 
 interface IButtonDefaultProps {
   text: string;
-  img: ReactNode;
+  img?: ReactNode;
 }
 
 export const ButtonDefault = ({ text, img }: IButtonDefaultProps) => {

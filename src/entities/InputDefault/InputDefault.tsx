@@ -1,13 +1,13 @@
-import { IInputDefaultProps } from "./InputDefault.types";
+import { IInputDefaultProps } from "@/shared/types/InputTypes";
 import "./InputDefault.scss";
 
 export const InputDefault = ({
   labelText,
   type,
   placeholder,
-}: IInputDefaultProps) => {
+}: Partial<IInputDefaultProps>) => {
   return (
-    <div className="inputDefault inputsRequired">
+    <div className="inputDefault">
       <label className="inputDefault__label" htmlFor="inputDefaultId">
         {labelText}
       </label>
@@ -16,7 +16,6 @@ export const InputDefault = ({
         type={type}
         id="inputDefaultId"
         placeholder={placeholder}
-        required
       />
     </div>
   );

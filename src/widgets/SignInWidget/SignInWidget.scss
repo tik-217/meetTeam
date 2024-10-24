@@ -1,0 +1,15 @@
+@use "@/shared/styles";
+
+.signInWidget {
+  @include styles.authFormWidth;
+
+  &__inputs {
+    div {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

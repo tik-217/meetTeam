@@ -1,4 +1,4 @@
-import { ButtonDefault } from "@/entities/ButtonDefault/ButtonDefault";
+import { ButtonDefault } from "@/entities/ButtonDefault";
 import { ArrowRight } from "@/shared/icons/svg/ArrowRight";
 import { Link } from "react-router-dom";
 import "./LoginFooter.scss";

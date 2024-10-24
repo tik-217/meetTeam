@@ -1,3 +1,4 @@
+import { SignIn } from "@/pages/SignIn/SignIn";
 import { SuspenseProvider } from "@/shared/providers/SuspenseProvider/SuspenseProvider";
 import { lazy } from "react";
 import {
@@ -35,7 +36,7 @@ const routerProvider = createBrowserRouter(
       }
     >
       <Route
-        path="/"
+        path="/auth"
         element={
           <SuspenseProvider>
             <Authentication />
@@ -50,6 +51,7 @@ const routerProvider = createBrowserRouter(
           </SuspenseProvider>
         }
       />
+      <Route path="/signIn" element={<SignIn />} />
     </Route>
   )
 );
