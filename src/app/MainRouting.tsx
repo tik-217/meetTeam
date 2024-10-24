@@ -1,16 +1,55 @@
+import { SuspenseProvider } from "@/shared/providers/SuspenseProvider/SuspenseProvider";
+import { lazy } from "react";
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
   Route,
   RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
 } from "react-router-dom";
-import { Authentication } from "../pages/Authentication/Authentication";
-import { ErrorProvider } from "@/shared/providers/ErrorProvider/ErrorProvider";
+
+const Authentication = lazy(() =>
+  import("@/pages/Authentication").then(({ Authentication }) => ({
+    default: Authentication,
+  }))
+);
+
+const Dashboard = lazy(() =>
+  import("@/pages/Dashboard").then(({ Dashboard }) => ({
+    default: Dashboard,
+  }))
+);
+
+const ErrorProvider = lazy(() =>
+  import("@/shared/providers/ErrorProvider").then(({ ErrorProvider }) => ({
+    default: ErrorProvider,
+  }))
+);
 
 const routerProvider = createBrowserRouter(
   createRoutesFromElements(
-    <Route errorElement={<ErrorProvider />}>
-      <Route path="/" element={<Authentication />} />
+    <Route
+      errorElement={
+        <SuspenseProvider>
+          <ErrorProvider />
+        </SuspenseProvider>
+      }
+    >
+      <Route
+        path="/"
+        element={
+          <SuspenseProvider>
+            <Authentication />
+          </SuspenseProvider>
+        }
+      />
+      <Route
+        path="/dashboard"
+        element={
+          <SuspenseProvider>
+            <Dashboard />
+          </SuspenseProvider>
+        }
+      />
     </Route>
   )
 );
