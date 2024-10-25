@@ -5,5 +5,9 @@
 }
 
 .inputsRequired {
-  @include styles.inputsRequired;
+  @include styles.inputsActionStyles("error");
+}
+
+.inputsSuccess {
+  @include styles.inputsActionStyles("success");
 }

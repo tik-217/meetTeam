@@ -1,0 +1,9 @@
+@use "@/shared/styles";
+
+.forgotPassWidget {
+  @include styles.authFormWidth;
+
+  & > div {
+    margin-bottom: 12px;
+  }
+}

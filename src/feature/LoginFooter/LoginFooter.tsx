@@ -6,7 +6,7 @@ import "./LoginFooter.scss";
 export const LoginFooter = () => {
   return (
     <div className="loginFooter">
-      <Link to={"/forgotPassword"} className="loginFooter__resetPassword">
+      <Link to={"/forgot-password"} className="loginFooter__forgotPassword">
         Mot de passe oublié ?
       </Link>
       <div className="loginFooter__button">
@@ -14,7 +14,7 @@ export const LoginFooter = () => {
       </div>
       <div>
         <span>Vous n'avez pas de compte ? </span>
-        <Link to={"/signIn"} className="loginFooter__linkForgotPassword">
+        <Link to={"/sign-in"} className="loginFooter__linkForgotPassword">
           Créer un compte
         </Link>
       </div>

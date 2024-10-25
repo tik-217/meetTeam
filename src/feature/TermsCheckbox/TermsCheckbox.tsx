@@ -12,7 +12,9 @@ export const TermsCheckbox = () => {
       />
       <label className="termsCheckbox__label" htmlFor="termsId">
         J'accepte{" "}
-        <Link to="/">les termes et les conditions d'utilisation.</Link>
+        <Link to="/" className="termsCheckbox__link">
+          les termes et les conditions d'utilisation.
+        </Link>
       </label>
     </div>
   );

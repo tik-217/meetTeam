@@ -1,0 +1,1 @@
+export { ForgotPassWidget } from "./ForgotPassWidget";

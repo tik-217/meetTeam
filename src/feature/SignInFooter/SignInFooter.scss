@@ -1,3 +1,5 @@
+@use "@/shared/styles";
+
 .signInFooter {
   margin-top: 16px;
 
@@ -8,5 +10,9 @@
   &__loginBtn {
     margin-top: 8px;
     text-align: center;
+  }
+
+  &__link {
+    @include styles.authLinks;
   }
 }

@@ -30,26 +30,32 @@
   }
 }
 
-// red label and inputs
-@mixin inputsRequired() {
+// success or error input types
+@mixin inputsActionStyles($actionType) {
+  $mainColor: $froly;
+
+  @if $actionType == "success" {
+    $mainColor: $salem;
+  }
+
   & > label {
-    color: $froly;
+    color: $mainColor;
   }
 
   input {
-    border: 1px solid $froly;
+    border: 1px solid $mainColor;
 
     &:focus {
-      border: 1px solid $froly;
+      border: 1px solid $mainColor;
     }
 
     &::placeholder {
-      color: $froly;
+      color: $mainColor;
     }
   }
 
   svg > path {
-    fill: $froly;
+    fill: $mainColor;
   }
 }
 
@@ -57,4 +63,14 @@
 @mixin authFormWidth() {
   max-width: 520px;
   width: 100%;
+}
+
+// auth links styles
+@mixin authLinks() {
+  text-decoration: none;
+  color: $havelockBlue;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

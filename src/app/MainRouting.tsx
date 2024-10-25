@@ -1,3 +1,4 @@
+import { ResetPass } from "@/pages/ResetPass/ResetPass";
 import { SignIn } from "@/pages/SignIn/SignIn";
 import { SuspenseProvider } from "@/shared/providers/SuspenseProvider/SuspenseProvider";
 import { lazy } from "react";
@@ -11,6 +12,12 @@ import {
 const Authentication = lazy(() =>
   import("@/pages/Authentication").then(({ Authentication }) => ({
     default: Authentication,
+  }))
+);
+
+const ForgotPass = lazy(() =>
+  import("@/pages/ForgotPass").then(({ ForgotPass }) => ({
+    default: ForgotPass,
   }))
 );
 
@@ -51,7 +58,30 @@ const routerProvider = createBrowserRouter(
           </SuspenseProvider>
         }
       />
-      <Route path="/signIn" element={<SignIn />} />
+      <Route
+        path="/sign-in"
+        element={
+          <SuspenseProvider>
+            <SignIn />
+          </SuspenseProvider>
+        }
+      />
+      <Route
+        path="/forgot-password"
+        element={
+          <SuspenseProvider>
+            <ForgotPass />
+          </SuspenseProvider>
+        }
+      />
+      <Route
+        path="/reset-password"
+        element={
+          <SuspenseProvider>
+            <ResetPass />
+          </SuspenseProvider>
+        }
+      />
     </Route>
   )
 );
