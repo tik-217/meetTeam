@@ -4,7 +4,7 @@ import logo from "@/shared/images/logo.svg";
 export const AuthTitle = ({
   withoutDescription,
 }: {
-  withoutDescription: boolean;
+  withoutDescription?: boolean;
 }) => {
   return (
     <section className="authTitle__titleSection">
