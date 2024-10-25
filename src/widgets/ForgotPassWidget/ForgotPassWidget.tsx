@@ -6,7 +6,7 @@ import { ForgotPassFooter } from "@/feature/ForgotPassFooter";
 export const ForgotPassWidget = () => {
   return (
     <form className="forgotPassWidget">
-      <AuthTitle />
+      <AuthTitle withoutDescription={true} />
       <InputDefault
         labelText="Adresse e-mail"
         type="email"
