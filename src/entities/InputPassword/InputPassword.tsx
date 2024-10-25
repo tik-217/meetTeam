@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { IInputDefaultProps } from "../InputDefault/InputDefault.types";
 import "./InputPassword.scss";
 import { EyseSvg } from "@/shared/icons/svg/Eyse";
+import { IInputDefaultProps } from "@/shared/types/InputTypes";
+import { v4 as uuidv4 } from "uuid";
 
 export const InputPassword = ({
   labelText,
@@ -9,18 +10,20 @@ export const InputPassword = ({
 }: Partial<IInputDefaultProps>) => {
   const [passVisible, setPassVisible] = useState(false);
 
+  const inputId = uuidv4();
+
   const passwordVisible = () => setPassVisible(!passVisible);
 
   return (
     <div className="inputPassword">
-      <label className="inputPassword__label" htmlFor="inputPassword">
+      <label className="inputPassword__label" htmlFor={inputId}>
         {labelText}
       </label>
       <div className="inputPassword__inputSection">
         <input
           className="inputPassword__input"
           type={passVisible ? "text" : "password"}
-          id="inputPassword"
+          id={inputId}
           placeholder={placeholder}
           required
         />
