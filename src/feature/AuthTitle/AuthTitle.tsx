@@ -14,11 +14,6 @@ export const AuthTitle = ({
           Merci d'entrer vos informations de connexion
         </p>
       )}
-      {!withoutDescription && (
-        <p className="authTitle__titleText">
-          Merci d'entrer vos informations de connexion
-        </p>
-      )}
     </section>
   );
 };
