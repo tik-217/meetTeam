@@ -9,7 +9,7 @@ export const AuthTitle = ({
   return (
     <section className="authTitle__titleSection">
       <img src={logo} alt="logo" />
-      {withoutDescription && (
+      {!withoutDescription && (
         <p className="authTitle__titleText">
           Merci d'entrer vos informations de connexion
         </p>
