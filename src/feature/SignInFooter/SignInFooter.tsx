@@ -12,7 +12,10 @@ export const SignInFooter = () => {
       <ButtonDefault text={"S'inscrire"} />
       <div className="signInFooter__loginBtn">
         <span>
-          Vous possedez déjà un compte ? <Link to={"/auth"}>Se connecter</Link>
+          Vous possedez déjà un compte ?{" "}
+          <Link to={"/auth"} className="signInFooter__link">
+            Se connecter
+          </Link>
         </span>
       </div>
     </div>

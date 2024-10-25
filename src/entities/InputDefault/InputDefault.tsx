@@ -10,7 +10,7 @@ export const InputDefault = ({
   const inputId = uuidv4();
 
   return (
-    <div className="inputDefault">
+    <div className="inputDefault inputsSuccess">
       <label className="inputDefault__label" htmlFor={inputId}>
         {labelText}
       </label>
